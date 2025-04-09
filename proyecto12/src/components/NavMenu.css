@@ -1,0 +1,97 @@
+/* NavMenu.css */
+
+/* Container nav for the side menu */
+main nav {
+  background: DarkSlateGray;
+  color: white;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
+  padding-right: 0 !important;
+  transition: all 1s;
+  margin-left: 10px;
+}
+
+nav .enlaces {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+  padding: 0;
+}
+
+main nav hr {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid lightgrey;
+}
+
+/* Each nav item */
+main nav div {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  width: 200px;
+  transition: all 1s;
+  cursor: pointer;
+}
+
+/* The icon circle */
+.icono {
+  background: white;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  border-radius: 20px;
+  color: DarkSlateGray;
+  text-align: center;
+  font-weight: bold;
+  margin-right: 20px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+/* Active or hover states */
+.activo,
+main nav > div > div:hover {
+  background: white;
+  color: DarkSlateGray;
+  border-radius: 10px 0 0 10px;
+  position: relative;
+  z-index: 10000;
+}
+
+.activo .icono {
+  background: DarkSlateGray;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  border-radius: 30px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+/* Hide/show toggle */
+#ocultar {
+  padding: 10px;
+  width: 200px;
+  cursor: pointer;
+}
+
+#ocultar .icono {
+  transform: rotate(180deg);
+  transition: all 1s;
+}
+
+/* Extra container for bottom operations */
+.operaciones {
+  padding: 0;
+}

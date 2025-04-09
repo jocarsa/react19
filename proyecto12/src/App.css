@@ -1,0 +1,53 @@
+/* App.css */
+
+/* Import your Ubuntu font if needed */
+@import url('https://static.jocarsa.com/fuentes/ubuntu-font-family-0.83/ubuntu.css');
+
+/* Basic global resets or overrides */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Ubuntu, sans-serif;
+  height: 100%;
+  transition: all 1s;
+}
+
+/* The body here is your overall background & base font-size */
+body {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
+  background: DarkSlateGray;
+  font-size: 1em;
+}
+
+/* The .relieve style used by multiple components */
+.relieve {
+  background-color: rgba(0, 0, 0, 0.3); /* Solid base color */
+  top: 0px;
+  border: none;
+  box-shadow:
+    0 4px 0 rgba(255, 255, 255, 0.7), /* Main relief shadow (down) */
+    0 6px 6px rgba(0, 0, 0, 0.2);     /* Soft drop shadow for depth */
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.relieve:active {
+  top: 4px;
+  box-shadow:
+    0 0 0 #357ab7, /* Remove relief */
+    0 2px 4px rgba(0, 0, 0, 0.2); /* Softer shadow */
+}
+
+/* Let main fill the rest of the page for layout */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

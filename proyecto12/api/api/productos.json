@@ -1,0 +1,32 @@
+[
+    {
+        "nombre": "Zapatillas deportivas",
+        "precio": "20.30 €",
+        "peso": "1Kg"
+    },
+    {
+        "nombre": "Camiseta técnica",
+        "precio": "12.50 €",
+        "peso": "0.2Kg"
+    },
+    {
+        "nombre": "Pantalones cortos",
+        "precio": "15.00 €",
+        "peso": "0.3Kg"
+    },
+    {
+        "nombre": "Mochila deportiva",
+        "precio": "29.99 €",
+        "peso": "0.8Kg"
+    },
+    {
+        "nombre": "Botella de agua reutilizable",
+        "precio": "9.90 €",
+        "peso": "0.4Kg"
+    },
+    {
+        "nombre": "Toalla de microfibra",
+        "precio": "7.75 €",
+        "peso": "0.25Kg"
+    }
+]

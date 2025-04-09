@@ -1,0 +1,22 @@
+[
+    {
+        "fecha":"2025-04-01",
+        "titulo":"Este es el titulo 1",
+        "autor":"Jose Vicente Carratala"
+    },
+    {
+        "fecha":"2025-04-01",
+        "titulo":"Este es el titulo 2",
+        "autor":"Jose Vicente Carratala"
+    },
+    {
+        "fecha":"2025-04-01",
+        "titulo":"Este es el titulo 3",
+        "autor":"Jose Vicente Carratala"
+    },
+    {
+        "fecha":"2025-04-01",
+        "titulo":"Este es el titulo 4",
+        "autor":"Jose Vicente Carratala"
+    }
+]

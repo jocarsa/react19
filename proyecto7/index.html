@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+           /* Reset some basic browser styles */
+            * {
+              margin: 0;
+              padding: 0;
+              box-sizing: border-box;
+            }
+
+            body {
+              font-family: 'Arial', sans-serif;
+              color: #333;
+              line-height: 1.6;
+              background: #f4f4f4;
+            }
+
+            /* Header styling with a modern gradient */
+            header {
+              background: linear-gradient(to right, #1e90ff, #00bfff);
+              padding: 20px;
+              color: #fff;
+              text-align: center;
+            }
+
+            /* Header titles */
+            header h1 {
+              font-size: 2.5em;
+              margin-bottom: 5px;
+            }
+
+            header h2 {
+              font-size: 1.5em;
+              font-weight: 300;
+              margin-bottom: 15px;
+            }
+
+            /* Navigation menu styling */
+            nav {
+              margin-top: 10px;
+            }
+
+            nav button {
+              background: transparent;
+              border: 2px solid #fff;
+              color: #fff;
+              padding: 10px 20px;
+              margin: 0 5px;
+              font-size: 1em;
+              cursor: pointer;
+              transition: all 0.3s ease;
+            }
+
+            nav button:hover,
+            nav button:focus {
+              background: #fff;
+              color: #00bfff;
+            }
+
+            /* Main content area */
+            main {
+              max-width: 1000px;
+              margin: 30px auto;
+              padding: 20px;
+              background: #fff;
+              box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+              border-radius: 8px;
+            }
+
+            /* Section content styling with fade-in effect */
+            main div {
+              display: none;
+              opacity: 0;
+              animation: fadeIn 0.5s forwards;
+            }
+
+            main div.active {
+              display: block;
+            }
+
+            /* Keyframes for fade-in animation */
+            @keyframes fadeIn {
+              from { opacity: 0; }
+              to { opacity: 1; }
+            }
+
+            /* Footer styling */
+            footer {
+              text-align: center;
+              padding: 10px;
+              background: #333;
+              color: #fff;
+              margin-top: 30px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Mi web</h1>
+            <h2>Subtítulo de mi web</h2>
+            <nav>
+                <button id="seccioninicio">Inicio</button>
+                <button id="seccionquiensoy">Quien soy</button>
+                <button id="seccionproyectos">Proyectos</button>
+            </nav>
+        </header>
+        <main>
+            <div id="inicio">
+                Esta es la página de inicio
+            </div>
+            <div id="quiensoy">
+                Esta es la página de quien soy
+            </div>
+            <div id="proyectos">
+                Esta es la página de proyectos
+            </div>
+        </main>
+        <footer>
+        </footer>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+              // Select all navigation buttons and content sections
+              const buttons = document.querySelectorAll("nav button");
+              const sections = document.querySelectorAll("main > div");
+
+              // Function to display the given section and hide the others
+              function showSection(sectionId) {
+                sections.forEach(section => {
+                  // Remove the active class from all sections
+                  section.classList.remove("active");
+                });
+                // Add the active class to the section that matches the sectionId
+                const targetSection = document.getElementById(sectionId);
+                if (targetSection) {
+                  targetSection.classList.add("active");
+                }
+              }
+
+              // Add click event listeners to each button
+              buttons.forEach(button => {
+                button.addEventListener("click", () => {
+                  // Convert the button id (e.g., "seccioninicio") to the related section id ("inicio")
+                  const sectionId = button.id.replace("seccion", "");
+                  showSection(sectionId);
+                  // Optionally update the browser hash (URL fragment)
+                  window.location.hash = sectionId;
+                });
+              });
+
+              // Check the URL for a hash value on initial load
+              const initialSection = window.location.hash.substring(1) || "inicio";
+              showSection(initialSection);
+            });
+
+        </script>
+    </body>
+</html>

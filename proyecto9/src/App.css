@@ -1,0 +1,89 @@
+/* src/App.css */
+
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html, #root, .App {
+  height: 100%;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background: #f4f4f4;
+}
+
+/* Header styling with a gradient */
+header {
+  background: linear-gradient(to right, #1e90ff, #00bfff);
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin-bottom: 5px;
+}
+
+header h2 {
+  font-size: 1.5em;
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+
+/* Navigation styling */
+nav {
+  margin-top: 10px;
+}
+
+nav button {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 10px 20px;
+  margin: 0 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+nav button:hover,
+nav button:focus {
+  background: #fff;
+  color: #00bfff;
+}
+
+/* Main content area */
+main {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Fade-in animation for sections */
+.section {
+  animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Footer styling */
+footer {
+  text-align: center;
+  padding: 10px;
+  background: #333;
+  color: #fff;
+  margin-top: 30px;
+}

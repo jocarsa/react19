@@ -1,0 +1,32 @@
+[
+    {
+        "nombre": "Jose Vicente Carratala",
+        "email": "info@josevicentecarratala.com",
+        "telefono": "620891718"
+    },
+    {
+        "nombre": "Laura Martínez Pérez",
+        "email": "laura.martinez@example.com",
+        "telefono": "634789123"
+    },
+    {
+        "nombre": "Carlos Gómez Ruiz",
+        "email": "carlos.gomez@example.com",
+        "telefono": "698214365"
+    },
+    {
+        "nombre": "Ana López Sánchez",
+        "email": "ana.lopez@example.com",
+        "telefono": "612345678"
+    },
+    {
+        "nombre": "David Torres Molina",
+        "email": "david.torres@example.com",
+        "telefono": "699887766"
+    },
+    {
+        "nombre": "María Hernández Gil",
+        "email": "maria.hernandez@example.com",
+        "telefono": "677123456"
+    }
+]

@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+    <head>
+        <style>
+            body{
+                font-family:sans-serif;
+            }
+            button{
+                background:blue;
+                color:white;
+                padding:10px;
+                border-radius:5px;
+                border:none;
+            }
+            #contador{
+                padding:10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="componente">
+            <button>Pulsame</button>
+            <div id="contador"></div>
+        </div>
+        <script>
+            let contador = 1;
+            document.querySelector("button").onclick = function(){
+                contador++;
+                document.querySelector("#contador").textContent = "Contador:"+contador;
+            }
+        </script>
+    </body>
+</html>

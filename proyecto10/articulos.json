@@ -1,0 +1,18 @@
+[
+    {
+        "titulo": "Introduction to Web Development",
+        "texto": "Web development is the process of creating websites and web applications. It involves various technologies like HTML, CSS, and JavaScript."
+    },
+    {
+        "titulo": "The Importance of SEO",
+        "texto": "Search Engine Optimization (SEO) is crucial for improving the visibility of your website on search engines. It involves optimizing content, keywords, and meta tags."
+    },
+    {
+        "titulo": "Understanding Responsive Design",
+        "texto": "Responsive design ensures that your website looks good on all devices, from desktops to smartphones. It uses flexible layouts and media queries."
+    },
+    {
+        "titulo": "Getting Started with JavaScript",
+        "texto": "JavaScript is a versatile programming language that adds interactivity to websites. It can be used for both front-end and back-end development."
+    }
+]

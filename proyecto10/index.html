@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                margin: 0;
+                padding: 0;
+                background-color: #f4f4f4;
+                color: #333;
+            }
+
+            h1 {
+                text-align: center;
+                margin-top: 20px;
+                color: #4CAF50;
+            }
+
+            main {
+                max-width: 800px;
+                margin: 20px auto;
+                padding: 20px;
+                background-color: #fff;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                border-radius: 8px;
+            }
+
+            article {
+                margin-bottom: 20px;
+                padding-bottom: 20px;
+                border-bottom: 1px solid #ddd;
+            }
+
+            h3 {
+                color: #333;
+            }
+
+            p {
+                color: #666;
+            }
+        </style>
+
+    </head>
+    <body>
+        <h1>Blog</h1>
+        <main>
+            
+        </main>
+        <script>
+            let contenedor = document.querySelector("main")
+            fetch("articulos.json")
+            .then(function(respuesta){
+               return respuesta.json()
+            })
+            .then(function(articulos){
+               articulos.forEach(function(articulo){
+                    contenedor.innerHTML += `
+                        <article>
+                            <h3>`+articulo.titulo+`</h3>
+                            <p>`+articulo.texto+`</p>
+                        </article>
+                    `
+               })
+            })
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,12 @@
+[
+    {
+        "etiqueta":"clientes"
+    },
+    {
+        "etiqueta":"productos"
+    }
+    ,
+    {
+        "etiqueta":"pedidos"
+    }
+]

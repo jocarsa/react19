@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+    <head>
+        <style>
+            body{
+                font-family:sans-serif;
+            }
+            button{
+                background:blue;
+                color:white;
+                padding:10px;
+                border-radius:5px;
+                border:none;
+            }
+            div{
+                padding:10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="componente1">
+            <button>Pulsame</button>
+            
+        </div>
+        <div id="componente2">
+            Hola que tal
+        </div>
+        <script>
+            
+            document.querySelector("#componente1 button").onclick = function(){
+                document.querySelector("#componente2").style.background = "red"
+            }
+        </script>
+    </body>
+</html>
