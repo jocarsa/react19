@@ -1,0 +1,14 @@
+button {
+  background: white;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 16px;
+}
+
+/* Special styling for the "=" button */
+.resultado {
+  background: green;
+  color: white;
+}

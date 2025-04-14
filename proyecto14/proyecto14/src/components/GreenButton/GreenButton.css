@@ -1,0 +1,12 @@
+.miboton {
+  border: 0;
+  
+  color: white;
+  border-radius: 20px;
+  padding: 10px;
+  min-width: 100px;
+}
+
+.verde {
+  background: green;
+}

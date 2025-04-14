@@ -1,0 +1,205 @@
+/* Reset / Global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background: antiquewhite;
+  color: #333;
+}
+
+/* Pantallas */
+.screen {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  padding-bottom: 60px; /* espacio para la barra inferior */
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Encabezado */
+header {
+  background: #f1d7b6; /* un tono más oscuro que antiquewhite para contraste */
+  border-bottom: 1px solid #e0c9a8;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 1.75rem;
+  margin: 0;
+}
+
+#logoutButton {
+  background: #c0392b; /* rojo suave */
+  border: none;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 2rem;
+  font-size: 0.9rem;
+}
+
+/* Formularios de Login / Registro */
+#loginScreen form,
+#registerForm form {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 4px;
+  width: 80%;
+  max-width: 400px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#loginScreen form h2,
+#registerForm form h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+#loginScreen form input,
+#registerForm form input,
+#loginScreen form button,
+#registerForm form button {
+  display: block;
+}
+
+#loginScreen form input,
+#registerForm form input {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  font-size: 1rem;
+  color: #333;
+}
+
+#loginScreen form button,
+#registerForm form button {
+  width: 100%;
+  background: #1db954;
+  border: none;
+  padding: 0.8rem 1rem;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.message {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #c0392b; /* rojo para errores o mensajes */
+}
+
+.register-link {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.register-link button {
+  background: none;
+  border: none;
+  color: #1db954;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+/* Secciones principales */
+main,
+section {
+  padding: 1rem;
+}
+
+/* Formulario para sueños */
+.dream-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.dream-form input,
+.dream-form textarea {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #aaa;
+  color: #333;
+  background: #fff;
+}
+
+.dream-form button {
+  margin-top: 1rem;
+  background: #1db954;
+  border: none;
+  padding: 0.75rem;
+  color: #fff;
+  border-radius: 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Items de sueños */
+.dream-item {
+  background: #fff;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.dream-item h4 {
+  margin-bottom: 0.25rem;
+}
+
+.date-info {
+  font-size: 0.8rem;
+  color: #555;
+}
+
+/* Navegación inferior */
+nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #f1d7b6;
+  border-top: 1px solid #e0c9a8;
+  z-index: 100;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  flex: 1;
+  text-align: center;
+  padding: 0.75rem 0;
+  cursor: pointer;
+  font-size: 1.5rem; /* un poco más grande para los emojis */
+  color: #333;
+}
+
+nav li:hover {
+  background: #e0c9a8;
+}
+
+nav li.active {
+  background: #e0c9a8;
+}

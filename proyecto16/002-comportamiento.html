@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+    <head>
+        <style>
+            #calculadora{
+                background:white;
+                padding:10px;
+                border:1px solid lightgrey;
+                border-radius:5px;
+                display:flex;
+                flex-direction: column;
+                gap:10px;
+                max-width:200px;
+            }
+            #botones{
+                display:grid;
+                grid-template-columns: auto auto auto auto;
+                gap:3px;
+            }
+            #pantalla{
+                font-family: monospace;
+                height:50px;
+                border-radius:5px;
+                background:lightsteelblue;
+                text-align:right;
+                line-height:50px;
+            }
+            button{
+                background:white;
+                border-radius:5px;
+                border:1px solid lightgrey;
+            }
+            #resultado{
+                background:green;
+                color:white;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="calculadora">
+            <div id="pantalla"></div>
+            <div id="botones">
+                <button>E</button>
+                <button>C</button>
+                <button>B</button>
+                <button>/</button>
+                <button>7</button>
+                <button>8</button>
+                <button>9</button>
+                <button>X</button>
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+                <button>-</button>
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>+</button>
+                <button>+/-</button>
+                <button>0</button>
+                <button>.</button>
+                <button id="resultado">=</button>
+            </div>
+        </div>
+        <script>
+            let pantalla = document.querySelector("#pantalla")
+            let expresion = "";
+            let botones = document.querySelectorAll("button")
+            botones.forEach(function(boton){
+                boton.onclick = function(){
+                    expresion += this.textContent
+                    pantalla.textContent = expresion
+                }
+            })
+            document.querySelector("#resultado").onclick = function(){
+                let evaluacion = eval(expresion)
+                pantalla.textContent = evaluacion
+            }
+            
+        </script>
+    </body>
+</html>

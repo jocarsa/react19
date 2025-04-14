@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz del Efecto Mandela</title>
+  <style>
+    /* Estilos básicos */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 20px;
+    }
+
+    #quiz-container {
+      max-width: 600px;
+      background-color: #fff;
+      margin: 0 auto;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    .question {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+
+    .feedback {
+      margin-top: 20px;
+      font-size: 1em;
+      font-weight: bold;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 1em;
+      margin-right: 10px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: #007BFF;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    button:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+  <div id="quiz-container">
+    <h2>Quiz del Efecto Mandela</h2>
+    <div id="question-section">
+      <!-- El contenido dinámico se insertará aquí -->
+    </div>
+  </div>
+
+  <script>
+    // Array de preguntas, cada objeto tiene la pregunta y la respuesta correcta ("verdadero" o "falso")
+    const questions = [
+      { pregunta: "La famosa frase de Star Wars es 'Luke, yo soy tu padre'.", respuesta: "falso" },
+      { pregunta: "El personaje del Monopoly siempre ha llevado un monóculo.", respuesta: "falso" },
+      { pregunta: "Pikachu tiene la punta de la cola de color negro.", respuesta: "falso" },
+      { pregunta: "Nelson Mandela murió en prisión en los años 80.", respuesta: "falso" },
+      { pregunta: "En la película de Disney Blancanieves, la Reina dice: 'Espejito, espejito en la pared...'.", respuesta: "falso" },
+      { pregunta: "El logotipo de KitKat lleva un guion entre 'Kit' y 'Kat'.", respuesta: "falso" },
+      { pregunta: "El nombre correcto del dibujo animado es 'Looney Tunes'.", respuesta: "verdadero" },
+      { pregunta: "C-3PO tiene una pierna completamente dorada.", respuesta: "falso" },
+      { pregunta: "La canción 'We Are the Champions' de Queen termina con la frase 'of the world' en su versión original de estudio.", respuesta: "falso" },
+      { pregunta: "El producto de limpieza se llama 'Febreze' y no 'Febreeze'.", respuesta: "verdadero" }
+    ];
+
+    let currentQuestionIndex = 0;
+    let score = 0;
+    const questionSection = document.getElementById('question-section');
+
+    // Función para mostrar la pregunta actual
+    function showQuestion() {
+      // Limpiar contenido previo
+      questionSection.innerHTML = '';
+
+      if (currentQuestionIndex < questions.length) {
+        const currentQuestion = questions[currentQuestionIndex];
+
+        // Crear div para la pregunta
+        const questionDiv = document.createElement('div');
+        questionDiv.className = 'question';
+        questionDiv.textContent = currentQuestion.pregunta;
+        questionSection.appendChild(questionDiv);
+
+        // Crear botones de respuesta
+        const buttonTrue = document.createElement('button');
+        buttonTrue.textContent = "Verdadero";
+        buttonTrue.onclick = () => evaluateAnswer("verdadero");
+
+        const buttonFalse = document.createElement('button');
+        buttonFalse.textContent = "Falso";
+        buttonFalse.onclick = () => evaluateAnswer("falso");
+
+        const buttonSkip = document.createElement('button');
+        buttonSkip.textContent = "Siguiente";
+        buttonSkip.onclick = () => evaluateAnswer("siguiente");
+
+        questionSection.appendChild(buttonTrue);
+        questionSection.appendChild(buttonFalse);
+        questionSection.appendChild(buttonSkip);
+      } else {
+        // Mostrar la puntuación final al terminar las preguntas
+        questionSection.innerHTML = `<div class="question">Has finalizado el quiz. Tu puntuación es: ${score} de ${questions.length}.</div>`;
+      }
+    }
+
+    // Función para evaluar la respuesta seleccionada
+    function evaluateAnswer(selectedAnswer) {
+      const currentQuestion = questions[currentQuestionIndex];
+      // Desactivar los botones para evitar respuestas múltiples
+      const buttons = questionSection.querySelectorAll('button');
+      buttons.forEach(btn => btn.disabled = true);
+
+      // Crear elemento de retroalimentación
+      const feedbackDiv = document.createElement('div');
+      feedbackDiv.className = 'feedback';
+
+      if (selectedAnswer === "siguiente") {
+        feedbackDiv.textContent = `Pregunta omitida. La respuesta correcta es: ${currentQuestion.respuesta.toUpperCase()}.`;
+      } else {
+        if (selectedAnswer === currentQuestion.respuesta) {
+          score++;
+          feedbackDiv.textContent = `¡Correcto! La respuesta correcta es: ${currentQuestion.respuesta.toUpperCase()}.`;
+        } else {
+          feedbackDiv.textContent = `Incorrecto. La respuesta correcta es: ${currentQuestion.respuesta.toUpperCase()}.`;
+        }
+      }
+      questionSection.appendChild(feedbackDiv);
+
+      // Botón para continuar a la siguiente pregunta
+      const nextButton = document.createElement('button');
+      nextButton.textContent = "Continuar";
+      nextButton.onclick = () => {
+        currentQuestionIndex++;
+        showQuestion();
+      };
+      questionSection.appendChild(nextButton);
+    }
+
+    // Iniciar el quiz mostrando la primera pregunta
+    showQuestion();
+  </script>
+</body>
+</html>

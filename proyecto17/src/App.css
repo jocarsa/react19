@@ -1,0 +1,18 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+body{
+     /* Set the container to use Flexbox */
+  display: flex;
+  /* Center horizontally */
+  justify-content: center;
+  /* Center vertically */
+  align-items: center;
+  /* Use viewport height so that the container fills the screen */
+  height: 100vh;
+}
+.App{
+    padding: 20px;
+
+}

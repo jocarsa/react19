@@ -1,0 +1,15 @@
+/* src/components/EmojiItem.css */
+.emoji-item {
+  font-size: 2em;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.emoji-item:hover {
+  transform: scale(1.1);
+  background-color: #f0f0f0;
+}

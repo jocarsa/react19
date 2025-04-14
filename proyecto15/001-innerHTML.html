@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+    <head>
+    </head>
+    <body>
+        <main></main>
+        <script>
+            document.querySelector("main").innerHTML = `
+                <button class="miboton">Pulsame</button>
+            `
+            document.querySelector("button").onclick = function(){
+                this.textContent = "Hola!"
+            }
+        </script>
+    </body>
+</html>

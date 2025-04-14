@@ -1,0 +1,59 @@
+/* Reset and Global Styles */
+@import url('https://static.jocarsa.com/fuentes/ubuntu-font-family-0.83/ubuntu.css');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Ubuntu, sans-serif; /* Optionally load this font from Google Fonts */
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  color: #333;
+  min-height: 100vh;
+  
+  justify-content: center;
+  align-items: center;
+  
+}
+
+/* Container for the app */
+.app-container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    margin:auto;
+    text-align:center;
+}
+
+/* Heading */
+h1 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+/* Search Input */
+input#buscar {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input#buscar:focus {
+  outline: none;
+  border-color: #888;
+}
+
+/* Responsive Grid for Articles */
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}

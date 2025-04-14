@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+    <head>
+        <style>
+            .miboton{
+                border:0px;
+                background:grey;
+                color:white;
+                border-radius:20px;
+                padding:10px;
+                min-width:100px;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Componente 1 ////////////////////////////////////////////////////////////////////////////// -->
+        <button class="miboton rojo">0</button>
+        <style>
+            .rojo{
+                background:red;
+            }
+        </style>
+        <script>
+            document.querySelector(".rojo").onclick = function(){
+                let valor = this.textContent*1;
+                valor++;
+                this.textContent = valor;
+            }
+        </script>
+        <!-- Componente 2 ////////////////////////////////////////////////////////////////////////////// -->
+        <button class="miboton verde">0</button>
+        <style>
+            .rojo{
+                background:red;
+            }
+        </style>
+        <script>
+            document.querySelector(".verde").onclick = function(){
+                let valor = this.textContent*1;
+                valor++;
+                this.textContent = valor;
+            }
+        </script>
+        <!-- Componente 3 ////////////////////////////////////////////////////////////////////////////// -->
+        <button class="miboton azul">0</button>
+        <style>
+            .rojo{
+                background:red;
+            }
+        </style>
+        <script>
+            document.querySelector(".azul").onclick = function(){
+                let valor = this.textContent*1;
+                valor++;
+                this.textContent = valor;
+            }
+        </script>
+        
+    </body>
+</html>
