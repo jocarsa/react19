@@ -1,0 +1,32 @@
+.page-content {
+  padding: 20px;
+  background: #fff;
+  margin: 20px;
+  border-radius: 5px;
+}
+
+.back-btn {
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.back-btn:hover {
+  background: #555;
+}
+
+.page-image {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.page-body {
+  margin: 20px 0;
+}

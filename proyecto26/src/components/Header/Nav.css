@@ -1,0 +1,29 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
+  /* flex-flow: row nowrap; */
+}
+
+.categories, .pages {
+  list-style: none;
+  padding: 0;
+  margin: 5px 0;
+  display: flex;
+}
+
+.categories li, .pages li {
+  margin: 0 15px;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: color 0.3s ease;
+}
+
+.categories li:hover, .pages li:hover,
+.categories li.active, .pages li.active {
+  color: #ddd;
+  text-decoration: none;
+}

@@ -1,0 +1,100 @@
+.editor-container {
+  background: #fff;
+  margin: 50px auto;
+  padding: 20px 25px;
+  border-radius: 6px;
+  max-width: 1000px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.editor-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.editor-header button {
+  margin-right: 20px;
+  background-color: #bdc3c7;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+.editor-header button:hover {
+  background-color: #95a5a6;
+}
+.editor-header h2 {
+  margin: 0;
+}
+
+.tabs-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.sheet-tabs {
+  display: flex;
+}
+.sheet-tab {
+  margin-right: 5px;
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  background-color: #ddd;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.sheet-tab.active {
+  background-color: #bbb;
+  font-weight: bold;
+}
+.add-sheet-btn {
+  margin-left: 10px;
+  background-color: #2ecc71;
+  border: none;
+  color: #fff;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.add-sheet-btn:hover {
+  background-color: #27ae60;
+}
+
+.actions-bar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.actions-bar button {
+  margin-right: 10px;
+  background-color: #3498db;
+  border: none;
+  color: #fff;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.actions-bar button:hover {
+  background-color: #2980b9;
+}
+.save-status {
+  margin-left: 20px;
+  color: #2ecc71;
+}
+
+.sheet-table {
+  overflow-x: auto;
+}
+.sheet-table table {
+  border-collapse: collapse;
+  min-width: 600px;
+}
+.sheet-table th,
+.sheet-table td {
+  border: 1px solid #ccc;
+  padding: 5px 8px;
+  text-align: center;
+  min-width: 60px;
+}
+.sheet-table td:focus {
+  outline: 2px solid #aaa;
+}

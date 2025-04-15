@@ -1,0 +1,134 @@
+/* Global settings and font import */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #f0f2f5;
+  font-family: 'Roboto', sans-serif;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+/* App container styles */
+.App {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px 20px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Header styling */
+h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* File input styling */
+input[type="file"] {
+  display: block;
+  margin: 0 auto 30px;
+  padding: 12px 15px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  background: #fafafa;
+  cursor: pointer;
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+input[type="file"]:hover {
+  border-color: #007BFF;
+  background: #f0f8ff;
+}
+
+/* Drag and drop container styling */
+.drag-container {
+  border: 2px dashed #007BFF;
+  border-radius: 10px;
+  padding: 40px;
+  background: linear-gradient(45deg, #f9f9f9, #ffffff);
+  transition: background 0.3s ease, border-color 0.3s ease;
+  margin-bottom: 30px;
+}
+
+.drag-container:hover {
+  background: linear-gradient(45deg, #e9f5ff, #ffffff);
+  border-color: #0056b3;
+}
+
+/* Textarea styling for Base64 string and img tag */
+textarea {
+  width: 100%;
+  padding: 15px;
+  margin-top: 10px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  resize: none;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+textarea:focus {
+  border-color: #007BFF;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+/* Copy button styling */
+.copy-button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.copy-button:hover {
+  background-color: #0056b3;
+}
+
+/* Preview image styling */
+.preview-image {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  transition: transform 0.3s ease;
+}
+
+.preview-image:hover {
+  transform: scale(1.05);
+}
+
+/* Section title styling */
+.section {
+  margin-bottom: 30px;
+}
+
+.section strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+  color: #007BFF;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 600px) {
+  .App {
+    margin: 20px;
+    padding: 20px;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+}

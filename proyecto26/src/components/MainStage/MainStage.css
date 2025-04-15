@@ -1,0 +1,35 @@
+.main-stage {
+    padding: 20px;
+    width:1024px;
+    margin:auto;
+}
+
+.posts-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-gap: 20px;
+}
+
+.pagination {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.pagination button {
+    padding: 10px 15px;
+    margin: 0 5px;
+    border: none;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background 0.3s ease;
+}
+
+.pagination button:hover {
+    background: #555;
+}
+
+.pagination button.active {
+    background: #555;
+}

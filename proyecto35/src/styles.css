@@ -1,0 +1,122 @@
+/* General resets */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #f9f9f9, #eef2f3);
+  color: #333;
+}
+
+.app {
+  padding: 2rem;
+  max-width: 960px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #2c3e50;
+}
+
+.section {
+  margin-top: 2rem;
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.section h2 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: #34495e;
+}
+
+.swatch-container {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.swatch-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
+}
+
+.swatch {
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  border: 2px solid #ddd;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s;
+}
+
+.swatch:hover {
+  transform: scale(1.05);
+}
+
+.swatch-info {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  color: #555;
+}
+
+.copy-btn {
+  margin-top: 0.3rem;
+  font-size: 0.7rem;
+  background: #2980b9;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.3rem 0.6rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.copy-btn:hover {
+  background: #1c5980;
+}
+
+.copied-msg {
+  color: green;
+  font-size: 0.8rem;
+  margin-left: 0.3rem;
+}
+
+.picker-row {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+
+#colorPicker {
+  border: none;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
+}
+
+.reset-btn {
+  background: crimson;
+  color: white;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.reset-btn:hover {
+  background: darkred;
+}

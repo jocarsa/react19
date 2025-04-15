@@ -1,0 +1,24 @@
+.navbar {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.navbar ul li {
+  margin: 0 15px;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: color 0.3s ease;
+}
+
+.navbar ul li:hover,
+.navbar ul li.active {
+  color: #ddd;
+  text-decoration: underline;
+}

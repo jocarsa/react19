@@ -1,0 +1,35 @@
+{
+  "blog": {
+    "title": "My Awesome Blog",
+    "subtitle": "Where Passion Meets Content",
+    "footer": "© 2025 My Awesome Blog. All rights reserved."
+  },
+  "categories": ["tech", "lifestyle", "news"],
+  "posts": [
+    {
+      "id": 1,
+      "title": "Introducing Our New Tech Tool",
+      "category": "tech",
+      "excerpt": "A quick overview of our new tech tool that promises to change everything.",
+      "content": "<p>This is the full content of our tech post. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>",
+      "date": "2025-04-08"
+    },
+    {
+      "id": 2,
+      "title": "Healthy Living Tips",
+      "category": "lifestyle",
+      "excerpt": "Simple tips to live a healthier and happier life.",
+      "content": "<p>This is the full content of our lifestyle post. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis.</p>",
+      "date": "2025-04-07"
+    }
+  ],
+  "comments": {
+    "1": [
+      {
+        "name": "Alice",
+        "comment": "Great insights on the new tool!",
+        "date": "2025-04-08"
+      }
+    ]
+  }
+}
