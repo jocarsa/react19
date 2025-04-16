@@ -1,0 +1,366 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #dadbd3;
+}
+
+.container {
+    display: flex;
+    width: 90%;
+    max-width: 1400px;
+    height: 90vh;
+    background-color: #f8f9fa;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Sidebar Styles */
+.sidebar {
+    flex: 30%;
+    border-right: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar .header {
+    background-color: #ededed;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-img {
+    cursor: pointer;
+    position: relative;
+}
+
+.user-img::after {
+    content: 'Click to change name';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    white-space: nowrap;
+}
+
+.user-img:hover::after {
+    opacity: 1;
+}
+
+.user-img img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-name {
+    font-weight: bold;
+    flex: 1;
+    margin-left: 10px;
+    color: #111b21;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.header-icons {
+    display: flex;
+    gap: 20px;
+    color: #54656f;
+}
+
+.header-icons i {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.search-container {
+    padding: 10px;
+    background-color: #f6f6f6;
+}
+
+.search {
+    background-color: white;
+    border-radius: 20px;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+}
+
+.search i {
+    color: #54656f;
+    margin-right: 15px;
+}
+
+.search input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 15px;
+}
+
+.connection-status {
+    padding: 5px 10px;
+    font-size: 12px;
+    text-align: center;
+    background-color: #f6f6f6;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.connection-status.online {
+    color: #07bc4c;
+}
+
+.connection-status.offline {
+    color: #ea0038;
+}
+
+.contacts-list {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.contact {
+    display: flex;
+    padding: 15px;
+    border-bottom: 1px solid #f2f2f2;
+    cursor: pointer;
+}
+
+.contact:hover {
+    background-color: #f5f5f5;
+}
+
+.contact.active {
+    background-color: #ebebeb;
+}
+
+.contact-img {
+    margin-right: 15px;
+}
+
+.contact-img img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.contact-name {
+    font-weight: bold;
+    color: #111b21;
+}
+
+.contact-time {
+    color: #667781;
+    font-size: 12px;
+}
+
+.contact-message {
+    display: flex;
+    justify-content: space-between;
+    color: #667781;
+    font-size: 14px;
+}
+
+.message-preview {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 70%;
+}
+
+.unread-count {
+    background-color: #25d366;
+    color: white;
+    border-radius: 50%;
+    min-width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    padding: 0 5px;
+}
+
+/* Chat Area Styles */
+.chat-area {
+    flex: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #ededed;
+}
+
+.chat-header-info {
+    display: flex;
+    align-items: center;
+}
+
+.chat-img img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.chat-details h4 {
+    color: #111b21;
+    margin-bottom: 5px;
+}
+
+.chat-details p {
+    color: #667781;
+    font-size: 13px;
+}
+
+.chat-header-icons {
+    display: flex;
+    gap: 20px;
+    color: #54656f;
+}
+
+.chat-header-icons i {
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.chat-messages {
+    flex: 1;
+    background-color: #e5ddd5;
+    background-image: url("https://web.whatsapp.com/img/bg-chat-tile-light_a4be8c63.png");
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.no-chat-selected {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #667781;
+    gap: 20px;
+}
+
+.no-chat-selected i {
+    font-size: 80px;
+    color: #dadbd3;
+}
+
+.message {
+    padding: 8px 12px;
+    border-radius: 7px;
+    margin-bottom: 10px;
+    max-width: 65%;
+    word-wrap: break-word;
+    position: relative;
+}
+
+.received {
+    background-color: white;
+    align-self: flex-start;
+}
+
+.sent {
+    background-color: #dcf8c6;
+    align-self: flex-end;
+}
+
+.message-info {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 11px;
+    color: #667781;
+    margin-top: 5px;
+}
+
+.message-time {
+    margin-right: 5px;
+}
+
+.message-status i {
+    font-size: 14px;
+}
+
+.chat-input-area {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #f0f0f0;
+    gap: 15px;
+}
+
+.chat-input-area i {
+    color: #54656f;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.chat-input-area input {
+    flex: 1;
+    border: none;
+    outline: none;
+    border-radius: 21px;
+    padding: 9px 12px;
+    font-size: 15px;
+}
+
+/* Added for WebSocket connection status */
+.user-status {
+    position: relative;
+}
+
+.user-status:before {
+    content: '';
+    display: block;
+    width: 12px;
+    height: 12px;
+    background-color: #25d366;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border: 2px solid #ededed;
+}
+
+.user-status.offline:before {
+    background-color: #ea0038;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Clone</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left sidebar - Contacts -->
+        <div class="sidebar">
+            <div class="header">
+                <div class="user-img" title="Click to change your name">
+                    <img src="/api/placeholder/40/40" alt="User Profile">
+                </div>
+                <div class="user-name" id="user-name">
+                    <!-- Username will be inserted here -->
+                </div>
+                <div class="header-icons">
+                    <i class="fas fa-circle-notch"></i>
+                    <i class="fas fa-comment-alt"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                </div>
+            </div>
+            
+            <div class="search-container">
+                <div class="search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search or start new chat">
+                </div>
+            </div>
+            
+            <div class="connection-status" id="connection-status">
+                <!-- Connection status will be shown here -->
+            </div>
+            
+            <div class="contacts-list">
+                <!-- Contacts will be inserted by JavaScript -->
+            </div>
+        </div>
+        
+        <!-- Right side - Chat area -->
+        <div class="chat-area">
+            <div class="chat-header">
+                <div class="chat-header-info">
+                    <div class="chat-img">
+                        <img src="/api/placeholder/40/40" alt="Contact Profile" id="current-chat-img">
+                    </div>
+                    <div class="chat-details">
+                        <h4 id="current-chat-name">Select a contact</h4>
+                        <p id="current-chat-status">Click on a contact to start chatting</p>
+                    </div>
+                </div>
+                <div class="chat-header-icons">
+                    <i class="fas fa-search"></i>
+                    <i class="fas fa-paperclip"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                </div>
+            </div>
+            
+            <div class="chat-messages" id="chat-messages">
+                <!-- Messages will be inserted by JavaScript -->
+                <div class="no-chat-selected">
+                    <i class="fas fa-comments"></i>
+                    <p>Select a contact to start messaging</p>
+                </div>
+            </div>
+            
+            <div class="chat-input-area">
+                <i class="far fa-smile"></i>
+                <i class="fas fa-paperclip"></i>
+                <input type="text" placeholder="Type a message" id="message-input">
+                <i class="fas fa-microphone"></i>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
